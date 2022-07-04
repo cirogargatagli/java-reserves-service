@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 import java.math.BigInteger;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -25,6 +26,15 @@ public class Course {
     @Basic
     @Column(name = "price")
     private BigInteger price;
+    @Basic
+    @Column(name = "tittle")
+    private String tittle;
+    @Basic
+    @Column(name = "description")
+    private String description;
+    @Basic
+    @Column(name = "imageURL")
+    private String imageURL;
 
     @ManyToOne
     @JoinColumn(
@@ -96,6 +106,18 @@ public class Course {
     public void setPrice(BigInteger price) {
         this.price = price;
     }
+
+    public String getTittle() { return tittle; }
+
+    public void setTittle(String tittle) { this.tittle = tittle; }
+
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
+
+    public String getImageURL() { return imageURL; }
+
+    public void setImageURL(String imageURL) { this.imageURL = imageURL; }
 
     public Instructor getInstructor() {
         return instructor;

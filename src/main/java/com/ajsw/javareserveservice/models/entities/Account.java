@@ -34,7 +34,7 @@ public class Account implements Serializable {
     @Column(name = "created_at", nullable = false, columnDefinition = "date DEFAULT 'now()'")
     @Getter
     @Setter
-    private Date createdAt = new Date(System.currentTimeMillis());
+    private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
 
     @Basic
     @Column(name = "updated_at")
@@ -57,7 +57,7 @@ public class Account implements Serializable {
     public Account(String email, String password, Boolean active, Role role) {
         this.email = email;
         this.password = password;
-        this.createdAt = new Date(System.currentTimeMillis());
+        this.createdAt = new Timestamp(System.currentTimeMillis());
         this.active = active;
         this.role = role;
     }

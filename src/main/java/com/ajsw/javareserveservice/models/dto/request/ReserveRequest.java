@@ -16,14 +16,14 @@ public class ReserveRequest {
 
     @Getter
     @Setter
-    public Course course;
+    public int idCourse;
 
     @Getter
     @Setter
-    public Client client;
+    public int idClient;
 
     @Getter
     @Setter
-    public Payment payment;
+    public int idPayment;
 
 }

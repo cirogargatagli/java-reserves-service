@@ -1,21 +1,28 @@
 package com.ajsw.javareserveservice.models.dto.response;
 
+import com.ajsw.javareserveservice.models.entities.Client;
+import com.ajsw.javareserveservice.models.entities.Course;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class ReserveResponseDto {
     @Getter
     @Setter
-    public String email;
+    private int idReserve;
 
     @Getter
     @Setter
-    public Date createdAt;
+    private Timestamp createdAt;
 
     @Getter
     @Setter
-    public boolean active;
+    private CourseResponseDto course;
 
 }
